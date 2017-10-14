@@ -39,7 +39,7 @@ public class Globalflock : MonoBehaviour {
             lifeTime[i] -= dt;
             if (lifeTime[i] <= 0)
             {
-                lifeTime[i] = Random.RandomRange(4, 7);
+                lifeTime[i] = Random.Range(4, 7);
                 allFish[i].transform.position = getRandomPos();
             }
         }
