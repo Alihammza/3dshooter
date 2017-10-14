@@ -95,6 +95,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4408744279297396}
   - component: {fileID: 95220963772607190}
+  - component: {fileID: 114966287259024096}
   m_Layer: 0
   m_Name: cruscarp
   m_TagString: Untagged
@@ -580,7 +581,7 @@ Transform:
   m_GameObject: {fileID: 1154351776176004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.9845405, y: -1.3940096, z: -8.03722}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children:
   - {fileID: 4959178424493738}
   - {fileID: 4688518530420288}
@@ -929,6 +930,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114966287259024096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1154351776176004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a10c4721cade5c41be65be02e239265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!137 &137250148838349612
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

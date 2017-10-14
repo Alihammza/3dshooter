@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class flock : MonoBehaviour {
 
-    public float speed = 0.5f;
+    public float speed = 5f;
 
 	// Use this for initialization
 	void Start () {
-        speed = Random.Range(0.5f, 1);
+        //speed = Random.Range(0.5f, 1);
 		
 	}
 	
