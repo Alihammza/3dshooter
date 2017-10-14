@@ -18,8 +18,8 @@ public class Instan : MonoBehaviour {
         
             Rigidbody rb = go.GetComponent<Rigidbody>();
             //  rb.velocity = Camera.main.transform.forward * 30;
-            rb.transform.Translate( new Vector3(8,2,2));
-            rb.velocity = new Vector3(2f, 10f, 8f);
+            //rb.transform.Translate( new Vector3(8,2,2));
+            rb.velocity = new Vector3(2f, 5f, 6f);
         }
 	}
 }

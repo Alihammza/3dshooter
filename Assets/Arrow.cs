@@ -6,7 +6,7 @@ public class Arrow : MonoBehaviour
 {
 
     Rigidbody rb;
-    Quaternion rot = Quaternion.EulerAngles(-90f,0f,0f);
+    Quaternion rot = Quaternion.Euler(-90f,0f,0f);
         
 
 
