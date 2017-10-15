@@ -35,7 +35,7 @@ public class StartOptions : MonoBehaviour {
 
     public void LoadSceneNumber(int number)
     {
-        SceneManager.LoadScene(number);
+        SceneManager.LoadScene("shooter");
         StartGameInScene();
     }
 
