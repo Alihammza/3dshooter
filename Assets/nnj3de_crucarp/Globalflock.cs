@@ -8,7 +8,7 @@ public class Globalflock : MonoBehaviour {
     static int numFish = 20;
     public static GameObject[] allFish = new GameObject[numFish];
     public static float[] lifeTime = new float[numFish];
-    static int offset = 30;
+    static int offset = 40;
 
     public static Vector3 goalPos = Vector3.zero;
 
@@ -39,8 +39,12 @@ public class Globalflock : MonoBehaviour {
             lifeTime[i] -= dt;
             if (lifeTime[i] <= 0)
             {
-                lifeTime[i] = Random.Range(4, 7);
-                allFish[i].transform.position = getRandomPos();
+				
+				flock otherScript = allFish[i].GetComponent<flock>();
+				if (!otherScript.hit){
+					lifeTime[i] = Random.Range(4, 7);
+	                allFish[i].transform.position = getRandomPos();
+				}
             }
         }
 	}

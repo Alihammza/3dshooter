@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿	using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,8 +25,7 @@ public class Instan : MonoBehaviour {
 
 //			if (touch.phase == TouchPhase.Began) {
 			if(Input.GetMouseButtonDown(0)){
-				Debug.Log ("curMouseDown");
-
+				
 				startTime = Time.time;
 //				startPos = touch.position;
 				startPos = Input.mousePosition;  
@@ -38,16 +37,20 @@ public class Instan : MonoBehaviour {
 				endPos = Input.mousePosition;
 				Vector3 deltaPos = endPos - startPos;
 				if (deltaPos.y < -10) {
-					var go = Instantiate(arrowPrefab, transform.position+new Vector3(0,0,10.0f), transform.rotation);
+					var go = Instantiate(arrowPrefab, transform.position+new Vector3(0f,0f,0.0f), transform.rotation);
 					Rigidbody rb = go.GetComponent<Rigidbody>();
-					Debug.Log (startPos.y);
-					Debug.Log (Screen.width / 2);
 					float pitch = (startPos.y-Screen.height/2)/(Screen.height/2.0f) * (3.1415f/2f);
 					float yaw = Mathf.Atan2 (deltaPos.y, deltaPos.x);
 					float power = deltaPos.magnitude / 20;
-					Debug.Log (pitch);
-					Debug.Log (Mathf.Sin (pitch));
-					Debug.Log (Mathf.Sin (3.1415f/2.0f));
+
+					if (pitch < 0)
+						pitch = 0.0f;
+
+					if (power < 10f)
+						power = 10f;
+
+					if (power > 40f)
+						power = 40f;
 
 					//rb.velocity = Camera.main.transform.forward * 30;
 					//rb.transform.Translate( new Vector3(8,2,2));
