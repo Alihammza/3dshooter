@@ -31,6 +31,10 @@ public class flock : MonoBehaviour {
 
 	public void reset(){
 		hit = false;
+		var cc = GetComponent<CapsuleCollider> ();
+		cc.enabled = true;
+		this.transform.parent = null;
+
 	}
 
 	void OnCollisionEnter (Collision col){

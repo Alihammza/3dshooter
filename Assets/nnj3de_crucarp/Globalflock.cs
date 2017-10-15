@@ -36,15 +36,15 @@ public class Globalflock : MonoBehaviour {
         float dt = Time.deltaTime;
         for (int i = 0; i < numFish; i++)
         {
-            lifeTime[i] -= dt;
+			flock otherScript = allFish[i].GetComponent<flock>();
+			if (otherScript.hit) {
+				break;
+			}
+			lifeTime[i] -= dt;
             if (lifeTime[i] <= 0)
             {
-				
-				flock otherScript = allFish[i].GetComponent<flock>();
-				if (!otherScript.hit){
 					lifeTime[i] = Random.Range(4, 7);
 	                allFish[i].transform.position = getRandomPos();
-				}
             }
         }
 	}

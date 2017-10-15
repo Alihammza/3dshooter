@@ -24,7 +24,8 @@ public class Arrow : MonoBehaviour
 		ttl -= Time.deltaTime;
 		if (ttl <= 0) {
 			foreach (Transform child in this.transform) {
-				GameObject.Destroy(child.gameObject);
+				flock otherScript = child.gameObject.GetComponent<flock>();
+				otherScript.reset();
 			}
 
 			Destroy(this.gameObject);
